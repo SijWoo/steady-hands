@@ -25,7 +25,9 @@ C_SOURCES =  \
 $(wildcard ../../drv/bno055/src/*.c)	\
 $(wildcard ../../drv/motor/src/*.c)	\
 $(wildcard ../../bsp/stm32f411/src/*.c)	\
-$(wildcard ../../bsp/stm32f411/STM32F4xx_StdPeriph_Driver/src/*.c)	
+$(wildcard ../../bsp/stm32f411/STM32F4xx_StdPeriph_Driver/src/*.c)	\
+$(wildcard ../../rtos/*.c)	\
+$(wildcard ../../rtos/portable/GCC/ARM_CM4F/*.c)
 
 
 ifneq ($(TEST), none)
@@ -103,7 +105,9 @@ C_INCLUDES =  \
 -I../../cfg	\
 -I../../bsp/inc	\
 -I../../bsp/stm32f411/cmsis	\
--I../../bsp/stm32f411/STM32F4xx_StdPeriph_Driver/inc
+-I../../bsp/stm32f411/STM32F4xx_StdPeriph_Driver/inc	\
+-I../../rtos/include	\
+-I../../rtos/portable/GCC/ARM_CM4F	\
 
 
 # compile gcc flags
