@@ -9,4 +9,6 @@
 #include <stdlib.h>
 #include <math.h>
 
+typedef enum {LOW=0, HIGH=1} pin_state_t;
+
 #endif
