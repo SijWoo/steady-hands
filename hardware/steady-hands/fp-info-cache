@@ -1,4 +1,4 @@
-17024465693765957
+17032430803411603
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -46199,6 +46199,34 @@ emi filter
 0
 5
 5
+Footprints
+CPT112S-A02-GM
+
+
+0
+21
+21
+Footprints
+TEWH
+
+
+0
+0
+0
+Footprints
+TEWH_logo
+
+
+0
+0
+0
+Footprints
+TEWH_small
+
+
+0
+0
+0
 Fuse
 Fuse_0201_0603Metric
 Fuse SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
@@ -69056,6 +69084,13 @@ LT1935ES5-TRPBF
 5
 Sij_Sensors
 APDS-9930
+
+
+0
+8
+8
+Sij_Sensors
+SM5420E
 
 
 0
