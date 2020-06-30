@@ -25,13 +25,13 @@ C_SOURCES =  \
 $(wildcard ../../drv/bno055/src/*.c)	\
 $(wildcard ../../drv/motor/src/*.c)	\
 $(wildcard ../../bsp/stm32f411/src/*.c)	\
-$(wildcard ../../bsp/stm32f411/STM32F4xx_StdPeriph_Driver/src/*.c)	\
+$(wildcard ../../bsp/stm32f411/STM32F4xx_HAL_Driver/src/*.c)	\
 $(wildcard ../../rtos/*.c)	\
 $(wildcard ../../rtos/portable/GCC/ARM_CM4F/*.c)
 
 
 ifneq ($(TEST), none)
-TEST_FILE := Test_$(TEST).c
+TEST_FILE := test_$(TEST).c
 # This line adds everything in Apps/Src/*.c except for main.c
 C_SOURCES += \
 $(filter-out ../../apps/src/main.c, $(wildcard ../../apps/src/*.c))	\
@@ -89,11 +89,11 @@ AS_DEFS =
 # C defines
 C_DEFS =  \
 -DSTM32F411xE	\
--DUSE_STDPERIPH_DRIVER	\
--D__FPU_PRESENT
+-DUSE_HAL_DRIVER	\
+-DUSE_FULL_LL_DRIVER
 
 
-# AS includes
+# vAS includes
 AS_INCLUDES = 
 
 # C includes
@@ -105,7 +105,7 @@ C_INCLUDES =  \
 -I../../cfg	\
 -I../../bsp/inc	\
 -I../../bsp/stm32f411/cmsis	\
--I../../bsp/stm32f411/STM32F4xx_StdPeriph_Driver/inc	\
+-I../../bsp/stm32f411/STM32F4xx_HAL_Driver/inc	\
 -I../../rtos/include	\
 -I../../rtos/portable/GCC/ARM_CM4F	\
 

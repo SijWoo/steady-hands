@@ -3,6 +3,8 @@
 
 #include "common.h"
 
+void Drv_BNO055_Init(void);
+
 
 
 #endif
