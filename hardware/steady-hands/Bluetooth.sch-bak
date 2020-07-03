@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 6 7
 Title ""
 Date ""
 Rev ""
@@ -71,20 +71,20 @@ nRESET
 $Comp
 L Device:R R?
 U 1 1 5EFC018D
-P 4550 2450
-F 0 "R?" H 4620 2496 50  0000 L CNN
-F 1 "0" H 4620 2405 50  0000 L CNN
-F 2 "" V 4480 2450 50  0001 C CNN
-F 3 "~" H 4550 2450 50  0001 C CNN
-	1    4550 2450
+P 4550 2500
+F 0 "R?" H 4620 2546 50  0000 L CNN
+F 1 "0" H 4620 2455 50  0000 L CNN
+F 2 "" V 4480 2500 50  0001 C CNN
+F 3 "~" H 4550 2500 50  0001 C CNN
+	1    4550 2500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4550 2300 4800 2300
+	5000 2450 4800 2450
 Wire Wire Line
-	4800 2300 4800 2450
+	4800 2450 4800 2350
 Wire Wire Line
-	4800 2450 5000 2450
+	4800 2350 4550 2350
 Wire Wire Line
 	5000 2550 4800 2550
 Wire Wire Line
@@ -92,5 +92,62 @@ Wire Wire Line
 Wire Wire Line
 	4800 2650 4550 2650
 Wire Wire Line
-	4550 2650 4550 2600
+	5000 2650 4900 2650
+Wire Wire Line
+	4900 2650 4900 2750
+Wire Wire Line
+	4900 2750 4500 2750
+$Comp
+L power:GND #PWR?
+U 1 1 5EFC41D5
+P 4500 2750
+F 0 "#PWR?" H 4500 2500 50  0001 C CNN
+F 1 "GND" V 4505 2622 50  0000 R CNN
+F 2 "" H 4500 2750 50  0001 C CNN
+F 3 "" H 4500 2750 50  0001 C CNN
+	1    4500 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 5050 5400 5050
+Connection ~ 5400 5050
+Wire Wire Line
+	5400 5050 5500 5050
+Connection ~ 5500 5050
+Wire Wire Line
+	5500 5050 5600 5050
+Connection ~ 5600 5050
+Wire Wire Line
+	5600 5050 5700 5050
+Connection ~ 5700 5050
+Wire Wire Line
+	5700 5050 5800 5050
+Connection ~ 5800 5050
+Wire Wire Line
+	5800 5050 5900 5050
+Connection ~ 5900 5050
+Wire Wire Line
+	5900 5050 6000 5050
+Connection ~ 6000 5050
+Wire Wire Line
+	6000 5050 6100 5050
+Connection ~ 6100 5050
+Wire Wire Line
+	6100 5050 6200 5050
+Connection ~ 6200 5050
+Wire Wire Line
+	6200 5050 6300 5050
+Wire Wire Line
+	5800 5050 5800 5150
+$Comp
+L power:GND #PWR?
+U 1 1 5EFC4D28
+P 5800 5150
+F 0 "#PWR?" H 5800 4900 50  0001 C CNN
+F 1 "GND" H 5805 4977 50  0000 C CNN
+F 2 "" H 5800 5150 50  0001 C CNN
+F 3 "" H 5800 5150 50  0001 C CNN
+	1    5800 5150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

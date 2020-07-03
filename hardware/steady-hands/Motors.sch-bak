@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -23,28 +23,6 @@ F 2 "" H 6950 3700 50  0001 C CNN
 F 3 "~" H 6950 3700 50  0001 C CNN
 	1    6950 3700
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Q_NMOS_GDS Q?
-U 1 1 5EF9AE62
-P 5300 3650
-F 0 "Q?" H 5504 3696 50  0000 L CNN
-F 1 "VND5N07-E" H 5504 3605 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TO-252-2" H 5500 3750 50  0001 C CNN
-F 3 "~" H 5300 3650 50  0001 C CNN
-	1    5300 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5EF9AE68
-P 4700 3650
-F 0 "R?" V 4493 3650 50  0000 C CNN
-F 1 "0" V 4584 3650 50  0000 C CNN
-F 2 "" V 4630 3650 50  0001 C CNN
-F 3 "~" H 4700 3650 50  0001 C CNN
-	1    4700 3650
-	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R?
@@ -105,12 +83,8 @@ Wire Wire Line
 Wire Wire Line
 	5100 3650 5000 3650
 Wire Wire Line
-	4550 3650 4400 3650
-Wire Wire Line
 	5000 3800 5000 3650
 Connection ~ 5000 3650
-Wire Wire Line
-	5000 3650 4850 3650
 Wire Wire Line
 	5400 3850 5400 4300
 Wire Wire Line
@@ -160,4 +134,17 @@ Wire Wire Line
 	6750 3800 6500 3800
 Text HLabel 4400 3650 0    50   Input ~ 0
 EN
+Wire Wire Line
+	4400 3650 5000 3650
+$Comp
+L Transistor_FET:DMN2041L Q?
+U 1 1 5EFAB5CE
+P 5300 3650
+F 0 "Q?" H 5504 3696 50  0000 L CNN
+F 1 "DMN2004WKQ" H 5504 3605 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 5500 3575 50  0001 L CIN
+F 3 "https://www.mouser.com/datasheet/2/115/DMN2004WKQ-1019748.pdf" H 5300 3650 50  0001 L CNN
+	1    5300 3650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
