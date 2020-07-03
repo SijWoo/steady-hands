@@ -3,10 +3,6 @@
 #include "stm32f4xx_ll_gpio.h"
 
 /**
- * Documentation for the STM32F411:
- */
-
-/**
  * @brief   Initializes the GPIO ports/pins that are connected to the modules.
  * @note    The necessary input pins that requires an interrupt are initialized.
  * @note    The module pins can be differentiated with the <x>id_t types.
