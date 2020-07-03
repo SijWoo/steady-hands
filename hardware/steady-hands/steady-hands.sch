@@ -17,29 +17,29 @@ Text Label 6550 4050 0    50   ~ 0
 EN
 Wire Wire Line
 	6400 4050 6550 4050
-Text HLabel 9100 1550 2    50   Input ~ 0
+Text HLabel 9100 1600 2    50   Input ~ 0
 SDA
-Text HLabel 9100 1650 2    50   Input ~ 0
+Text HLabel 9100 1700 2    50   Input ~ 0
 SCL
-Text HLabel 9100 1750 2    50   Input ~ 0
+Text HLabel 9100 1800 2    50   Input ~ 0
 INT1
 $Sheet
-S 9000 1450 750  500 
+S 9000 1500 750  500 
 U 5EF43BAC
 F0 "BNO055" 50
 F1 "BNO055.sch" 50
 $EndSheet
 Wire Wire Line
-	9100 1550 8850 1550
+	9100 1600 8850 1600
 Wire Wire Line
-	9100 1650 8850 1650
+	9100 1700 8850 1700
 Wire Wire Line
-	9100 1750 8850 1750
-Text Label 8850 1550 2    50   ~ 0
+	9100 1800 8850 1800
+Text Label 8850 1600 2    50   ~ 0
 SDA
-Text Label 8850 1650 2    50   ~ 0
+Text Label 8850 1700 2    50   ~ 0
 SCL
-Text Label 8850 1750 2    50   ~ 0
+Text Label 8850 1800 2    50   ~ 0
 INT1
 $Sheet
 S 9000 2200 750  400 
@@ -148,11 +148,11 @@ Text Label 8850 3700 2    50   ~ 0
 SCL
 Text Label 8850 3800 2    50   ~ 0
 INT2
-Text HLabel 9100 1850 2    50   Input ~ 0
+Text HLabel 9100 1900 2    50   Input ~ 0
 nRESET1
 Wire Wire Line
-	9100 1850 8850 1850
-Text Label 8850 1850 2    50   ~ 0
+	9100 1900 8850 1900
+Text Label 8850 1900 2    50   ~ 0
 nRESET1
 Text Label 8850 4350 2    50   ~ 0
 UART_TX
