@@ -1,4 +1,10 @@
 #include "common.h"
+#include "stm32f4xx_ll_bus.h"
+#include "stm32f4xx_ll_gpio.h"
+
+/**
+ * Documentation for the STM32F411:
+ */
 
 /**
  * @brief   Initializes the GPIO ports/pins that are connected to the modules.
@@ -9,7 +15,7 @@
  * @return  None
  */
 void BSP_GPIO_Init(void) {
-
+    
 }
 
 /**
