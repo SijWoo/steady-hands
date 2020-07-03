@@ -5,7 +5,9 @@
  * @param   None
  * @return  None
  */
-void BSP_I2C_Init(void);
+void BSP_I2C_Init(void) {
+    
+}
 
 /**
  * @brief   Sends data buffer onto the I2C bus.
