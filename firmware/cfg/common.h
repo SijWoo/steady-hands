@@ -11,4 +11,6 @@
 
 typedef enum {LOW=0, HIGH=1} pin_state_t;
 
+typedef enum {MOTORA=0, MOTORB} motorid_t;
+
 #endif
