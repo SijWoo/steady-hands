@@ -105,7 +105,7 @@ void BSP_I2C_Init(void) {
  * @return  Number of bytes that was written to the bus.
  */
 int32_t BSP_I2C_Write(uint8_t devId, uint16_t regAddr, uint8_t *data, uint32_t len) {
-
+    HAL_I2C_Mem_Write_IT(&hi2c1, devId, regAddr, I2C_MEMADD_SIZE_16BIT, data, len);
 }
 
 /**
@@ -121,5 +121,34 @@ int32_t BSP_I2C_Write(uint8_t devId, uint16_t regAddr, uint8_t *data, uint32_t l
  * @return  Number of bytes that was written to the bus.
  */
 int32_t BSP_I2C_Read(uint8_t devId, uint16_t regAddr, uint8_t *data, uint32_t len) {
-    
+    HAL_I2C_Mem_Read_IT(&hi2c1, devId, regAddr, I2C_MEMADD_SIZE_16BIT, data, len);
+}
+
+
+/**
+  * @brief  This function handles DMA1 stream0 global interrupt.
+  */
+void DMA1_Stream0_IRQHandler(void) {
+    HAL_DMA_IRQHandler(&hdma_i2c1_rx);
+}
+
+/**
+  * @brief  This function handles DMA1 stream1 global interrupt.
+  */
+void DMA1_Stream1_IRQHandler(void) {
+    HAL_DMA_IRQHandler(&hdma_i2c1_tx);
+}
+
+/**
+  * @brief  This function handles I2C1 event interrupt.
+  */
+void I2C1_EV_IRQHandler(void) {
+    HAL_I2C_EV_IRQHandler(&hi2c1);
+}
+
+/**
+  * @brief  This function handles I2C1 error interrupt.
+  */
+void I2C1_ER_IRQHandler(void) {
+    HAL_I2C_ER_IRQHandler(&hi2c1);
 }
