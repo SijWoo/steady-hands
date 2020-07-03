@@ -5,7 +5,7 @@
  * @param   None
  * @return  None
  */
-void BSP_Motors_Init(void) {
+void BSP_PWM_Init(void) {
 
 }
 
@@ -15,6 +15,6 @@ void BSP_Motors_Init(void) {
  * @param   duty_fixpt  Fixed point integer with resolution 1 and range [0,100].
  * @return  None
  */
-void BSP_Motors_SetDuty(motorid_t mid, uint8_t duty_fixpt) {
+void BSP_PWM_SetDuty(motorid_t mid, uint8_t duty_fixpt) {
 
 }
