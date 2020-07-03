@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Sij_Power:TPS65721 U?
+L steady-hands:TPS65721 U?
 U 1 1 5F025F79
 P 5150 5650
 F 0 "U?" H 5150 9265 50  0000 C CNN
@@ -319,6 +319,17 @@ F 1 "GND" H 4155 3127 50  0000 C CNN
 F 2 "" H 4150 3300 50  0001 C CNN
 F 3 "" H 4150 3300 50  0001 C CNN
 	1    4150 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5EFEB722
+P 2150 2900
+F 0 "J?" H 2207 3367 50  0000 C CNN
+F 1 "USB_B_Micro" H 2207 3276 50  0000 C CNN
+F 2 "" H 2300 2850 50  0001 C CNN
+F 3 "~" H 2300 2850 50  0001 C CNN
+	1    2150 2900
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
