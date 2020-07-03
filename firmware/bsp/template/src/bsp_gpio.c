@@ -35,7 +35,7 @@ void BSP_GPIO_SetOutputState(outputid_t outid, pin_state_t state) {
 
 /**
  * @brief   Gets the state of the input pin from the specific module.
- * @param   inid     Input ID.
+ * @param   inid    Input ID.
  * @return  pin_state_t (LOW or HIGH)
  */
 pin_state_t BSP_GPIO_GetInputState(inputid_t inid) {
