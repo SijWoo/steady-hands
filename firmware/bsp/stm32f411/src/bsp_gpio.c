@@ -2,19 +2,29 @@
 #include "stm32f4xx_hal.h"
 
 /**
+ * @brief   GPIO specifications struct
+ */
+typedef struct {
+    GPIO_TypeDef *port;  // Portx
+    uint16_t pin;       // Pin number
+} gpio_t;
+
+/**
  * @brief   Array of function pointers for ISR.
  */
 static void (*handlers[INPUTID_SIZE])(void) = {0};
 
 /**
- * @brief   Array of GPIO Ports used for each input ID.
+ * @brief   Array of GPIO specs used for each input ID.
  */
-static GPIO_TypeDef input_ports[INPUTID_SIZE] = {0};
+static const gpio_t input[INPUTID_SIZE] = {
+    0
+};
 
 /**
- * @brief   Array of GPIO Ports used for each output ID.
+ * @brief   Array of GPIO specs used for each output ID.
  */
-static GPIO_TypeDef output_port[OUTPUTID_SIZE] = {0};
+static const gpio_t output[OUTPUTID_SIZE] = {0};
 
 /**
  * @brief   Initializes the GPIO ports/pins that are connected to the modules.
@@ -26,6 +36,26 @@ static GPIO_TypeDef output_port[OUTPUTID_SIZE] = {0};
  */
 void BSP_GPIO_Init(void) {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+    // Initialize input pins
+    GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Alternate = 0;
+    GPIO_InitStruct.Speed = GPIO_SPEED_MEDIUM;
+    for(int32_t i = 0; i < INPUTID_SIZE; i++) {
+        GPIO_InitStruct.Pin = input[i].pin;
+        HAL_GPIO_Init(input[i].port, &GPIO_InitStruct);
+    }
+
+    // Initialize output pins
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Alternate = 0;
+    GPIO_InitStruct.Speed = GPIO_SPEED_MEDIUM;
+    for(int32_t i = 0; i < OUTPUTID_SIZE; i++) {
+        GPIO_InitStruct.Pin = output[i].pin;
+        HAL_GPIO_Init(output[i].port, &GPIO_InitStruct);
+    }
 }
 
 /**
