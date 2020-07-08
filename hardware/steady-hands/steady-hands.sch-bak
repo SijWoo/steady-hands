@@ -17,29 +17,29 @@ Text Label 6550 4050 0    50   ~ 0
 EN
 Wire Wire Line
 	6400 4050 6550 4050
-Text HLabel 9100 1600 2    50   Input ~ 0
+Text HLabel 9100 1550 2    50   Input ~ 0
 SDA
-Text HLabel 9100 1700 2    50   Input ~ 0
+Text HLabel 9100 1650 2    50   Input ~ 0
 SCL
-Text HLabel 9100 1800 2    50   Input ~ 0
+Text HLabel 9100 1750 2    50   Input ~ 0
 INT1
 $Sheet
-S 9000 1500 750  500 
+S 9000 1450 750  500 
 U 5EF43BAC
 F0 "BNO055" 50
 F1 "BNO055.sch" 50
 $EndSheet
 Wire Wire Line
-	9100 1600 8850 1600
+	9100 1550 8850 1550
 Wire Wire Line
-	9100 1700 8850 1700
+	9100 1650 8850 1650
 Wire Wire Line
-	9100 1800 8850 1800
-Text Label 8850 1600 2    50   ~ 0
+	9100 1750 8850 1750
+Text Label 8850 1550 2    50   ~ 0
 SDA
-Text Label 8850 1700 2    50   ~ 0
+Text Label 8850 1650 2    50   ~ 0
 SCL
-Text Label 8850 1800 2    50   ~ 0
+Text Label 8850 1750 2    50   ~ 0
 INT1
 $Sheet
 S 9000 2200 750  400 
@@ -148,11 +148,11 @@ Text Label 8850 3700 2    50   ~ 0
 SCL
 Text Label 8850 3800 2    50   ~ 0
 INT2
-Text HLabel 9100 1900 2    50   Input ~ 0
+Text HLabel 9100 1850 2    50   Input ~ 0
 nRESET1
 Wire Wire Line
-	9100 1900 8850 1900
-Text Label 8850 1900 2    50   ~ 0
+	9100 1850 8850 1850
+Text Label 8850 1850 2    50   ~ 0
 nRESET1
 Text Label 8850 4350 2    50   ~ 0
 UART_TX
@@ -209,9 +209,77 @@ Wire Wire Line
 Text Label 6550 3750 0    50   ~ 0
 EN1
 $Sheet
-S 9000 5000 750  550 
+S 9000 5000 750  900 
 U 5F021BD7
-F0 "PMIC" 50
-F1 "PMIC.sch" 50
+F0 "Power Management" 50
+F1 "PwrMgmtsch.sch" 50
 $EndSheet
+Text HLabel 9100 5100 2    50   Input ~ 0
++3V3
+Text HLabel 9100 5200 2    50   Input ~ 0
++1V3
+Text HLabel 9100 5300 2    50   Output ~ 0
+CE
+Text HLabel 9100 5400 2    50   Output ~ 0
+PWR_EN
+Text HLabel 9100 5500 2    50   Output ~ 0
+PWR_EN1
+Text HLabel 9100 5600 2    50   Output ~ 0
+PWR_EN2
+Text HLabel 9100 5700 2    50   Input ~ 0
+PGOOD
+Text HLabel 9100 5800 2    50   Input ~ 0
+CHG
+Wire Wire Line
+	9100 5100 8850 5100
+Wire Wire Line
+	9100 5300 8850 5300
+Wire Wire Line
+	9100 5400 8850 5400
+Wire Wire Line
+	9100 5500 8850 5500
+Wire Wire Line
+	9100 5600 8850 5600
+Wire Wire Line
+	9100 5700 8850 5700
+Wire Wire Line
+	9100 5800 8850 5800
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F12D7E2
+P 8850 5100
+F 0 "#PWR?" H 8850 4950 50  0001 C CNN
+F 1 "+3V3" H 8865 5273 50  0000 C CNN
+F 2 "" H 8850 5100 50  0001 C CNN
+F 3 "" H 8850 5100 50  0001 C CNN
+	1    8850 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L steady-hands-cache:+1V3 #PWR?
+U 1 1 5F12E82D
+P 8650 5150
+F 0 "#PWR?" H 8650 5350 50  0001 C CNN
+F 1 "+1V3" H 8635 5373 50  0000 C CNN
+F 2 "" H 8650 5350 50  0001 C CNN
+F 3 "" H 8650 5350 50  0001 C CNN
+	1    8650 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 5200 9100 5200
+Text Label 8850 5300 2    50   ~ 0
+CE
+Text Label 8850 5400 2    50   ~ 0
+PWR_EN
+Text Label 8850 5500 2    50   ~ 0
+PWR_EN1
+Text Label 8850 5600 2    50   ~ 0
+PWR_EN2
+Text Label 8850 5700 2    50   ~ 0
+PGOOD
+Text Label 8850 5800 2    50   ~ 0
+CHG
+Wire Wire Line
+	8650 5100 8650 5200
 $EndSCHEMATC

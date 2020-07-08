@@ -44,7 +44,7 @@ F 3 "~" H 3800 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L steady-hands:CapSense_01x08 C?
+L Sij_Touch:CapSense_01x08 C?
 U 1 1 5EFBC936
 P 7550 4450
 F 0 "C?" H 7878 5096 50  0000 L CNN
@@ -97,7 +97,7 @@ $EndComp
 Connection ~ 3350 3800
 Connection ~ 3350 4200
 $Comp
-L steady-hands:CPT112S-A02-GM U?
+L Sij_Touch:CPT112S-A02-GM U?
 U 1 1 5EF85C6E
 P 6050 5500
 F 0 "U?" H 6050 8131 50  0000 C CNN
