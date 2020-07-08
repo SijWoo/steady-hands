@@ -16,7 +16,7 @@ void BSP_GPIO_Init(void);
 /**
  * @brief   Attaches a handler to an interrupt pin.
  * @param   inid    Input ID.
- * @param   handler Function that will run whenever there INT pin it triggered.
+ * @param   handler Function that will run whenever the input pin changes.
  */
 void BSP_GPIO_AttachISR(inputid_t inid, void (*handler)(void));
 /**
