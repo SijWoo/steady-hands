@@ -617,7 +617,7 @@ Wire Wire Line
 	8050 3200 8750 3200
 Connection ~ 8050 3200
 $Comp
-L steady-hands-rescue:+1V3-steady-hands-cache #PWR?
+L steady-hands:+1V3 #PWR?
 U 1 1 5F0C6788
 P 9900 2600
 AR Path="/5F0C6788" Ref="#PWR?"  Part="1" 
