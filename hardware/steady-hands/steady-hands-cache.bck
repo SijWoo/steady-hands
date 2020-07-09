@@ -1,8 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP +1V3
-D Power symbol creates a global label with name "+10V"
-K power-flag
-$ENDCMP
-#
-#End Doc Library
