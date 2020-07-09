@@ -82,7 +82,7 @@ U 5EF97273
 F0 "Motors" 50
 F1 "Motors.sch" 50
 $EndSheet
-Text HLabel 9100 3000 2    50   Input ~ 0
+Text HLabel 9100 3000 2    50   Output ~ 0
 EN
 Wire Wire Line
 	8850 3000 9100 3000
@@ -198,7 +198,7 @@ Wire Wire Line
 	6400 4200 6550 4200
 Text Label 6550 4200 0    50   ~ 0
 INT2
-Text HLabel 9100 3100 2    50   Input ~ 0
+Text HLabel 9100 3100 2    50   Output ~ 0
 EN1
 Text Label 8850 3100 2    50   ~ 0
 EN1
