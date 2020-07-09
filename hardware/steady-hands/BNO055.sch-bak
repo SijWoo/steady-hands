@@ -19,8 +19,8 @@ U 1 1 5EF56CFF
 P 6300 3800
 AR Path="/5EF56CFF" Ref="U?"  Part="1" 
 AR Path="/5EF43BAC/5EF56CFF" Ref="U?"  Part="1" 
-F 0 "U?" H 6300 4681 50  0000 C CNN
-F 1 "BNO055" H 6300 4590 50  0000 C CNN
+F 0 "U?" H 6300 2700 50  0000 C CNN
+F 1 "BNO055" H 6300 2600 50  0000 C CNN
 F 2 "Package_LGA:LGA-28_5.2x3.8mm_P0.5mm" H 6550 3150 50  0001 L CNN
 F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST_BNO055_DS000_14.pdf" H 6300 4000 50  0001 C CNN
 	1    6300 3800
@@ -122,33 +122,19 @@ Wire Wire Line
 	5550 3150 5550 3700
 Wire Wire Line
 	4850 3500 5700 3500
-Text Label 6400 2800 1    50   ~ 0
-VDDIO
-Text Label 6200 2800 1    50   ~ 0
-VDD
 Text Label 4850 3500 0    50   ~ 0
 INT1
 Text Label 4850 3300 0    50   ~ 0
 nRESET1
-Text Label 5550 2650 1    50   ~ 0
-VDD
-Text Label 7450 3200 1    50   ~ 0
-VDD
-Text Label 3800 3200 1    50   ~ 0
-VDDIO
-Wire Wire Line
-	6400 3100 6400 2800
-Wire Wire Line
-	6200 3100 6200 2800
 Text Label 4850 4100 0    50   ~ 0
 SCL
 Text Label 4850 4000 0    50   ~ 0
 SDA
-Text HLabel 4850 4000 0    50   Input ~ 0
+Text HLabel 4850 4000 0    50   BiDi ~ 0
 SDA
-Text HLabel 4850 4100 0    50   Input ~ 0
+Text HLabel 4850 4100 0    50   BiDi ~ 0
 SCL
-Text HLabel 4850 3500 0    50   Input ~ 0
+Text HLabel 4850 3500 0    50   Output ~ 0
 INT1
 Wire Wire Line
 	5300 3150 5300 3300
@@ -160,8 +146,6 @@ Wire Wire Line
 	5300 3300 5700 3300
 Wire Wire Line
 	4850 3300 5300 3300
-Text Label 5300 2650 1    50   ~ 0
-VDDIO
 Wire Wire Line
 	5300 2650 5300 2850
 Wire Wire Line
@@ -222,4 +206,66 @@ Wire Wire Line
 Connection ~ 4850 4500
 Wire Wire Line
 	4850 4500 6200 4500
+Wire Wire Line
+	6200 3100 6300 3100
+Connection ~ 6300 3100
+Wire Wire Line
+	6300 3100 6400 3100
+Wire Wire Line
+	6300 3000 6300 3100
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F16055B
+P 6300 3000
+F 0 "#PWR?" H 6300 2850 50  0001 C CNN
+F 1 "+3V3" H 6315 3173 50  0000 C CNN
+F 2 "" H 6300 3000 50  0001 C CNN
+F 3 "" H 6300 3000 50  0001 C CNN
+	1    6300 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F1606C7
+P 7450 3200
+F 0 "#PWR?" H 7450 3050 50  0001 C CNN
+F 1 "+3V3" H 7465 3373 50  0000 C CNN
+F 2 "" H 7450 3200 50  0001 C CNN
+F 3 "" H 7450 3200 50  0001 C CNN
+	1    7450 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F16088A
+P 5550 2650
+F 0 "#PWR?" H 5550 2500 50  0001 C CNN
+F 1 "+3V3" H 5565 2823 50  0000 C CNN
+F 2 "" H 5550 2650 50  0001 C CNN
+F 3 "" H 5550 2650 50  0001 C CNN
+	1    5550 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F160A1A
+P 5300 2650
+F 0 "#PWR?" H 5300 2500 50  0001 C CNN
+F 1 "+3V3" H 5315 2823 50  0000 C CNN
+F 2 "" H 5300 2650 50  0001 C CNN
+F 3 "" H 5300 2650 50  0001 C CNN
+	1    5300 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F160BBC
+P 3800 3200
+F 0 "#PWR?" H 3800 3050 50  0001 C CNN
+F 1 "+3V3" H 3815 3373 50  0000 C CNN
+F 2 "" H 3800 3200 50  0001 C CNN
+F 3 "" H 3800 3200 50  0001 C CNN
+	1    3800 3200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
