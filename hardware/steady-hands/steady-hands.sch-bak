@@ -256,7 +256,7 @@ F 3 "" H 8850 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L steady-hands-cache:+1V3 #PWR?
+L steady-hands:+1V3 #PWR?
 U 1 1 5F12E82D
 P 8650 5150
 F 0 "#PWR?" H 8650 5350 50  0001 C CNN

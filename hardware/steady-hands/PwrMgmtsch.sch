@@ -617,7 +617,7 @@ Wire Wire Line
 	8050 3200 8750 3200
 Connection ~ 8050 3200
 $Comp
-L steady-hands-rescue:+1V3-steady-hands-cache #PWR?
+L steady-hands:+1V3 #PWR?
 U 1 1 5F0C6788
 P 9900 2600
 AR Path="/5F0C6788" Ref="#PWR?"  Part="1" 
@@ -676,13 +676,10 @@ F 3 "" H 7500 2550 50  0001 C CNN
 	1    7500 2550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9900 2550 10050 2550
-Connection ~ 9900 2550
-Text HLabel 10050 2550 2    50   Output ~ 0
+Text HLabel 10250 2550 2    50   Output ~ 0
 +1V3
 Wire Wire Line
-	10350 4400 10550 4400
+	10350 4400 10400 4400
 Connection ~ 10350 4400
 Text HLabel 10550 4400 2    50   Output ~ 0
 +3V3
@@ -804,4 +801,35 @@ $EndComp
 Wire Wire Line
 	7750 2550 8300 2550
 Connection ~ 7750 2550
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5F0707ED
+P 10000 2550
+F 0 "TP?" H 9950 2600 50  0000 R CNN
+F 1 "+1V3" H 9950 2700 50  0000 R CNN
+F 2 "" H 10200 2550 50  0001 C CNN
+F 3 "~" H 10200 2550 50  0001 C CNN
+	1    10000 2550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9900 2550 10000 2550
+Connection ~ 9900 2550
+Connection ~ 10000 2550
+Wire Wire Line
+	10000 2550 10250 2550
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5F07BA93
+P 10400 4400
+F 0 "TP?" H 10350 4450 50  0000 R CNN
+F 1 "+3V3" H 10350 4550 50  0000 R CNN
+F 2 "" H 10600 4400 50  0001 C CNN
+F 3 "~" H 10600 4400 50  0001 C CNN
+	1    10400 4400
+	-1   0    0    1   
+$EndComp
+Connection ~ 10400 4400
+Wire Wire Line
+	10400 4400 10550 4400
 $EndSCHEMATC

@@ -617,9 +617,11 @@ Wire Wire Line
 	8050 3200 8750 3200
 Connection ~ 8050 3200
 $Comp
-L steady-hands-cache:+1V3 #PWR?
+L steady-hands-rescue:+1V3-steady-hands-cache #PWR?
 U 1 1 5F0C6788
 P 9900 2600
+AR Path="/5F0C6788" Ref="#PWR?"  Part="1" 
+AR Path="/5F021BD7/5F0C6788" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 9900 2800 50  0001 C CNN
 F 1 "+1V3" H 9885 2823 50  0000 C CNN
 F 2 "" H 9900 2800 50  0001 C CNN
@@ -674,13 +676,10 @@ F 3 "" H 7500 2550 50  0001 C CNN
 	1    7500 2550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9900 2550 10050 2550
-Connection ~ 9900 2550
-Text HLabel 10050 2550 2    50   Output ~ 0
+Text HLabel 10250 2550 2    50   Output ~ 0
 +1V3
 Wire Wire Line
-	10350 4400 10550 4400
+	10350 4400 10400 4400
 Connection ~ 10350 4400
 Text HLabel 10550 4400 2    50   Output ~ 0
 +3V3
@@ -789,7 +788,7 @@ Text Notes 600  5650 0    50   ~ 0
 TMR: unconnected to set the timers to the default values\n         R = t MAXCHG/ (10 x 48)\nILIM (Input Current Limit): R = 1550 / I I_MAX if ILIM = 200-500 mA\n                                          R = 1610 / I I_MAX if ILIM = 500 mA - 1.5 A\nISET (Fast Charge Current): R = 890/I CHG
 NoConn ~ 5250 3850
 $Comp
-L steady-hands-cache:TPS62841DGR U?
+L steady-hands-rescue:TPS62841DGR-steady-hands-cache U?
 U 1 1 5F134D69
 P 8750 3250
 F 0 "U?" H 8750 4215 50  0000 C CNN
@@ -802,4 +801,35 @@ $EndComp
 Wire Wire Line
 	7750 2550 8300 2550
 Connection ~ 7750 2550
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5F0707ED
+P 10000 2550
+F 0 "TP?" H 9950 2600 50  0000 R CNN
+F 1 "+1V3" H 9950 2700 50  0000 R CNN
+F 2 "" H 10200 2550 50  0001 C CNN
+F 3 "~" H 10200 2550 50  0001 C CNN
+	1    10000 2550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9900 2550 10000 2550
+Connection ~ 9900 2550
+Connection ~ 10000 2550
+Wire Wire Line
+	10000 2550 10250 2550
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5F07BA93
+P 10400 4400
+F 0 "TP?" H 10350 4450 50  0000 R CNN
+F 1 "+3V3" H 10350 4550 50  0000 R CNN
+F 2 "" H 10600 4400 50  0001 C CNN
+F 3 "~" H 10600 4400 50  0001 C CNN
+	1    10400 4400
+	-1   0    0    1   
+$EndComp
+Connection ~ 10400 4400
+Wire Wire Line
+	10400 4400 10550 4400
 $EndSCHEMATC
