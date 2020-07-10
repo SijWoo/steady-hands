@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 7 7
 Title ""
 Date ""
 Rev ""
@@ -128,7 +128,7 @@ L Connector:Conn_ARM_JTAG_SWD_10 J4
 U 1 1 5F142B1F
 P 8650 3350
 F 0 "J4" H 8207 3396 50  0000 R CNN
-F 1 "Conn_ARM_JTAG_SWD_10" H 8207 3305 50  0000 R CNN
+F 1 "ARM_SWD" H 8207 3305 50  0000 R CNN
 F 2 "" H 8650 3350 50  0001 C CNN
 F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 8300 2100 50  0001 C CNN
 	1    8650 3350

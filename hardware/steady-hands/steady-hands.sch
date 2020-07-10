@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Label 3350 4750 2    50   ~ 0
-EN
+TIM3_CH3
 Wire Wire Line
 	9000 1550 8750 1550
 Wire Wire Line
@@ -26,7 +26,7 @@ SDA
 Text Label 8750 1650 2    50   ~ 0
 SCL
 Text Label 8750 1750 2    50   ~ 0
-INT1
+PB8
 $Sheet
 S 9000 2200 750  400 
 U 5EF838FE
@@ -47,7 +47,7 @@ SDA
 Text Label 8750 2400 2    50   ~ 0
 SCL
 Text Label 8750 2500 2    50   ~ 0
-INT
+PB5
 $Comp
 L MCU_ST_STM32F4:STM32F411CEUx U1
 U 1 1 5EF9373D
@@ -64,13 +64,13 @@ S 9000 2850 750  400
 U 5EF97273
 F0 "Motors" 50
 F1 "Motors.sch" 50
-F2 "EN" I L 9000 3000 50 
-F3 "EN1" I L 9000 3100 50 
+F2 "PWM" I L 9000 3000 50 
+F3 "PWM1" I L 9000 3100 50 
 $EndSheet
 Wire Wire Line
 	8750 3000 9000 3000
 Text Label 8750 3000 2    50   ~ 0
-EN
+TIM3_CH3
 Wire Wire Line
 	3550 5350 3350 5350
 Wire Wire Line
@@ -88,25 +88,23 @@ Wire Wire Line
 Wire Wire Line
 	4850 5850 5050 5850
 Text Label 5050 5550 0    50   ~ 0
-UART_RX
+UART1_RX
 Text Label 5050 5650 0    50   ~ 0
-UART_TX
+UART1_TX
 Text Label 5050 5750 0    50   ~ 0
-UART_RTS
+UART1_RTS
 Text Label 5050 5850 0    50   ~ 0
-UART_CTS
+UART1_CTS
 Wire Wire Line
 	3550 5250 3350 5250
 Wire Wire Line
 	3550 5550 3350 5550
 Text Label 3350 5250 2    50   ~ 0
-INT
+PB5
 Text Label 3350 5550 2    50   ~ 0
-INT1
+PB8
 Wire Wire Line
 	4850 5450 5050 5450
-Text Label 5050 5450 0    50   ~ 0
-nRESET
 $Sheet
 S 9000 3500 750  400 
 U 5EFB8965
@@ -114,7 +112,7 @@ F0 "CapTouch" 50
 F1 "CapTouch.sch" 50
 F2 "SDA" B L 9000 3600 50 
 F3 "SCL" B L 9000 3700 50 
-F4 "INT2" O L 9000 3800 50 
+F4 "INT" O L 9000 3800 50 
 $EndSheet
 Wire Wire Line
 	9000 3600 8750 3600
@@ -127,21 +125,11 @@ SDA
 Text Label 8750 3700 2    50   ~ 0
 SCL
 Text Label 8750 3800 2    50   ~ 0
-INT2
+PB4
 Wire Wire Line
 	9000 1850 8750 1850
 Text Label 8750 1850 2    50   ~ 0
-nRESET1
-Text Label 8750 4350 2    50   ~ 0
-UART_TX
-Text Label 8750 4450 2    50   ~ 0
-UART_RX
-Text Label 8750 4550 2    50   ~ 0
-UART_CTS
-Text Label 8750 4650 2    50   ~ 0
-UART_RTS
-Text Label 8750 4250 2    50   ~ 0
-nRESET
+PB9
 Wire Wire Line
 	9000 4250 8750 4250
 Wire Wire Line
@@ -152,18 +140,16 @@ Wire Wire Line
 	9000 4550 8750 4550
 Wire Wire Line
 	9000 4650 8750 4650
-Wire Wire Line
-	3400 5650 3550 5650
-Text Label 3400 5650 2    50   ~ 0
-nRESET1
+Text Label 3350 5650 2    50   ~ 0
+PB9
 Text Label 3350 5150 2    50   ~ 0
-INT2
+PB4
 Text Label 8750 3100 2    50   ~ 0
-EN1
+TIM3_CH4
 Wire Wire Line
 	9000 3100 8750 3100
 Text Label 3350 4850 2    50   ~ 0
-EN1
+TIM3_CH4
 Wire Wire Line
 	9000 5100 8750 5100
 Wire Wire Line
@@ -202,16 +188,14 @@ F 3 "" H 8550 5350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8550 5200 9000 5200
-Text Label 8750 5300 2    50   ~ 0
-CE
-Text Label 8750 5500 2    50   ~ 0
-PWR_EN1
-Text Label 8750 5600 2    50   ~ 0
-PWR_EN2
-Text Label 8750 5700 2    50   ~ 0
-PGOOD
 Text Label 8750 5800 2    50   ~ 0
-CHG
+PA7
+Text Label 8750 5700 2    50   ~ 0
+PA6
+Text Label 8750 5500 2    50   ~ 0
+PA4
+Text Label 8750 5400 2    50   ~ 0
+PA3
 Wire Wire Line
 	8550 5100 8550 5200
 $Comp
@@ -280,19 +264,17 @@ Wire Wire Line
 Wire Wire Line
 	3350 5150 3550 5150
 Text Label 5050 5050 0    50   ~ 0
-PGOOD
+PA4
 Text Label 5050 4850 0    50   ~ 0
-PWR_EN
+PA2
 Text Label 5050 5250 0    50   ~ 0
-PWR_EN2
-Text Label 8750 5400 2    50   ~ 0
-PWR_EN
+PA6
 Text Label 5050 5150 0    50   ~ 0
-PWR_EN1
+PA5
 Text Label 5050 4950 0    50   ~ 0
-CHG
+PA3
 Text Label 5050 5350 0    50   ~ 0
-CE
+PA7
 Wire Wire Line
 	4850 5350 5050 5350
 Wire Wire Line
@@ -443,33 +425,9 @@ F 3 "~" H 3950 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 1800 2600 1800
-Connection ~ 2600 1800
+	2150 1800 2150 1750
 Wire Wire Line
-	2600 1800 3050 1800
-Connection ~ 3050 1800
-Wire Wire Line
-	3050 1800 3500 1800
-Connection ~ 3500 1800
-Wire Wire Line
-	3500 1800 3950 1800
-Wire Wire Line
-	2150 2100 2600 2100
-Connection ~ 2600 2100
-Wire Wire Line
-	2600 2100 3050 2100
-Connection ~ 3050 2100
-Wire Wire Line
-	3050 2100 3500 2100
-Connection ~ 3500 2100
-Wire Wire Line
-	3500 2100 3950 2100
-Wire Wire Line
-	2150 1800 2150 1700
-Connection ~ 2150 1800
-Wire Wire Line
-	2150 2100 2150 2200
-Connection ~ 2150 2100
+	2150 2100 2150 2150
 $Comp
 L power:+3V3 #PWR0108
 U 1 1 5F0EE7F6
@@ -493,7 +451,6 @@ F 3 "" H 2150 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 3550 5750
-NoConn ~ 3550 5850
 NoConn ~ 3550 5950
 NoConn ~ 3550 6050
 NoConn ~ 3550 6150
@@ -542,15 +499,9 @@ F 3 "~" H 5050 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5050 1800 4600 1800
+	4600 2100 4600 2150
 Wire Wire Line
-	5050 2100 4600 2100
-Wire Wire Line
-	4600 2100 4600 2200
-Connection ~ 4600 2100
-Wire Wire Line
-	4600 1800 4600 1700
-Connection ~ 4600 1800
+	4600 1800 4600 1750
 $Comp
 L power:GND #PWR0111
 U 1 1 5F13B186
@@ -574,59 +525,43 @@ F 3 "" H 4600 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 3550 5050
-$Comp
-L Switch:SW_SPDT SW2
-U 1 1 5F163A70
-P 2050 5800
-F 0 "SW2" H 2050 6085 50  0000 C CNN
-F 1 "SW_SPDT" H 2050 5994 50  0000 C CNN
-F 2 "" H 2050 5800 50  0001 C CNN
-F 3 "~" H 2050 5800 50  0001 C CNN
-	1    2050 5800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	2250 5700 2250 5600
+	2650 5850 2650 5750
 $Comp
 L Device:R R1
 U 1 1 5F16A4AC
-P 2250 5450
-F 0 "R1" H 2320 5496 50  0000 L CNN
-F 1 "10k" H 2320 5405 50  0000 L CNN
-F 2 "" V 2180 5450 50  0001 C CNN
-F 3 "~" H 2250 5450 50  0001 C CNN
-	1    2250 5450
+P 2650 5600
+F 0 "R1" H 2720 5646 50  0000 L CNN
+F 1 "10k" H 2720 5555 50  0000 L CNN
+F 2 "" V 2580 5600 50  0001 C CNN
+F 3 "~" H 2650 5600 50  0001 C CNN
+	1    2650 5600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2250 5300 2250 5200
+	2650 5450 2650 5350
 $Comp
 L power:+3V3 #PWR0113
 U 1 1 5F16D94A
-P 2250 5200
-F 0 "#PWR0113" H 2250 5050 50  0001 C CNN
-F 1 "+3V3" H 2265 5373 50  0000 C CNN
-F 2 "" H 2250 5200 50  0001 C CNN
-F 3 "" H 2250 5200 50  0001 C CNN
-	1    2250 5200
+P 2650 5350
+F 0 "#PWR0113" H 2650 5200 50  0001 C CNN
+F 1 "+3V3" H 2665 5523 50  0000 C CNN
+F 2 "" H 2650 5350 50  0001 C CNN
+F 3 "" H 2650 5350 50  0001 C CNN
+	1    2650 5350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1850 5800 1750 5800
-Wire Wire Line
-	1750 5800 1750 5900
 $Comp
 L power:GND #PWR0114
 U 1 1 5F170EA1
-P 1750 5900
-F 0 "#PWR0114" H 1750 5650 50  0001 C CNN
-F 1 "GND" H 1755 5727 50  0000 C CNN
-F 2 "" H 1750 5900 50  0001 C CNN
-F 3 "" H 1750 5900 50  0001 C CNN
-	1    1750 5900
+P 2250 6150
+F 0 "#PWR0114" H 2250 5900 50  0001 C CNN
+F 1 "GND" H 2255 5977 50  0000 C CNN
+F 2 "" H 2250 6150 50  0001 C CNN
+F 3 "" H 2250 6150 50  0001 C CNN
+	1    2250 6150
 	1    0    0    -1  
 $EndComp
-NoConn ~ 2250 5900
 $Comp
 L Connector_Generic:Conn_01x04 J1
 U 1 1 5F177DDC
@@ -700,13 +635,13 @@ Wire Wire Line
 Wire Wire Line
 	6750 3850 6600 3850
 Text Label 6600 3850 2    50   ~ 0
-UART_RX
+UART1_RX
 Text Label 6600 3950 2    50   ~ 0
-UART_TX
+UART1_TX
 Text Label 6600 4050 2    50   ~ 0
-UART_RTS
+UART1_RTS
 Text Label 6600 4150 2    50   ~ 0
-UART_CTS
+UART1_CTS
 $Comp
 L power:GND #PWR0117
 U 1 1 5F1DB8DA
@@ -759,11 +694,11 @@ SCL
 Text Label 6600 5000 2    50   ~ 0
 SDA
 Text Label 6600 5100 2    50   ~ 0
-INT
+PB4
 Text Label 6600 5200 2    50   ~ 0
-INT1
+PB5
 Text Label 6600 5300 2    50   ~ 0
-INT2
+PB8
 $Sheet
 S 9000 1450 750  500 
 U 5EF43BAC
@@ -771,33 +706,22 @@ F0 "BNO055" 50
 F1 "BNO055.sch" 50
 F2 "SDA" B L 9000 1550 50 
 F3 "SCL" B L 9000 1650 50 
-F4 "INT1" O L 9000 1750 50 
+F4 "INT" O L 9000 1750 50 
 F5 "nRESET1" I L 9000 1850 50 
-$EndSheet
-$Sheet
-S 9000 4150 750  600 
-U 5EF722F6
-F0 "Bluetooth" 50
-F1 "Bluetooth.sch" 50
-F2 "nRESET" I L 9000 4250 50 
-F3 "UART_TX" O L 9000 4350 50 
-F4 "UART_RX" I L 9000 4450 50 
-F5 "UART_CTS" B L 9000 4550 50 
-F6 "UART_RTS" B L 9000 4650 50 
 $EndSheet
 $Sheet
 S 9000 5000 750  900 
 U 5F021BD7
 F0 "Power Management" 50
-F1 "PwrMgmtsch.sch" 50
+F1 "PwrMgmt.sch" 50
 F2 "+3V3" O L 9000 5100 50 
 F3 "+1V3" O L 9000 5200 50 
-F4 "CE" I L 9000 5300 50 
-F5 "PWR_EN" I L 9000 5400 50 
-F6 "PWR_EN1" I L 9000 5500 50 
-F7 "PWR_EN2" I L 9000 5600 50 
-F8 "PGOOD" O L 9000 5700 50 
-F9 "CHG" O L 9000 5800 50 
+F4 "CE" I L 9000 5800 50 
+F5 "1V3_EN" I L 9000 5300 50 
+F6 "CHG_EN1" I L 9000 5600 50 
+F7 "CHG_EN2" I L 9000 5700 50 
+F8 "PGOOD" O L 9000 5500 50 
+F9 "CHG" O L 9000 5400 50 
 $EndSheet
 $Comp
 L power:PWR_FLAG #FLG0106
@@ -811,4 +735,108 @@ F 3 "~" H 2450 3850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Connection ~ 2450 3850
+Text Label 8750 5600 2    50   ~ 0
+PA5
+Text Label 8750 5300 2    50   ~ 0
+PA2
+Text Label 5050 5450 0    50   ~ 0
+PA8
+Text Label 8750 4250 2    50   ~ 0
+PA8
+$Sheet
+S 9000 4150 750  600 
+U 5EF722F6
+F0 "Bluetooth" 50
+F1 "Bluetooth.sch" 50
+F2 "nRESET" I L 9000 4250 50 
+F3 "UART_TX" O L 9000 4350 50 
+F4 "UART_RX" I L 9000 4450 50 
+F5 "UART_CTS" B L 9000 4550 50 
+F6 "UART_RTS" B L 9000 4650 50 
+$EndSheet
+Text Label 8750 4650 2    50   ~ 0
+UART1_RTS
+Text Label 8750 4550 2    50   ~ 0
+UART1_CTS
+Text Label 8750 4450 2    50   ~ 0
+UART1_RX
+Text Label 8750 4350 2    50   ~ 0
+UART1_TX
+Wire Wire Line
+	3350 5650 3550 5650
+$Comp
+L Switch:SW_SPDT SW2
+U 1 1 5F163A70
+P 2450 5950
+F 0 "SW2" H 2450 6235 50  0000 C CNN
+F 1 "SW_SPDT" H 2450 6144 50  0000 C CNN
+F 2 "" H 2450 5950 50  0001 C CNN
+F 3 "~" H 2450 5950 50  0001 C CNN
+	1    2450 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 5950 2250 6150
+Wire Wire Line
+	2600 1800 2600 1750
+Wire Wire Line
+	2600 1750 3050 1750
+Wire Wire Line
+	3950 1750 3950 1800
+Wire Wire Line
+	3500 1750 3500 1800
+Connection ~ 3500 1750
+Wire Wire Line
+	3500 1750 3950 1750
+Wire Wire Line
+	3050 1750 3050 1800
+Connection ~ 3050 1750
+Wire Wire Line
+	3050 1750 3500 1750
+Wire Wire Line
+	2600 1750 2150 1750
+Connection ~ 2600 1750
+Connection ~ 2150 1750
+Wire Wire Line
+	2150 1750 2150 1700
+Wire Wire Line
+	2150 2150 2600 2150
+Wire Wire Line
+	2600 2150 2600 2100
+Connection ~ 2150 2150
+Wire Wire Line
+	2150 2150 2150 2200
+Wire Wire Line
+	2600 2150 3050 2150
+Wire Wire Line
+	3950 2150 3950 2100
+Connection ~ 2600 2150
+Wire Wire Line
+	3500 2100 3500 2150
+Connection ~ 3500 2150
+Wire Wire Line
+	3500 2150 3950 2150
+Wire Wire Line
+	3050 2100 3050 2150
+Connection ~ 3050 2150
+Wire Wire Line
+	3050 2150 3500 2150
+Wire Wire Line
+	4600 1750 5050 1750
+Wire Wire Line
+	5050 1750 5050 1800
+Connection ~ 4600 1750
+Wire Wire Line
+	4600 1750 4600 1700
+Wire Wire Line
+	4600 2150 5050 2150
+Wire Wire Line
+	5050 2150 5050 2100
+Connection ~ 4600 2150
+Wire Wire Line
+	4600 2150 4600 2200
+Connection ~ 2650 5850
+NoConn ~ 2650 6050
+Wire Wire Line
+	2650 5850 3550 5850
 $EndSCHEMATC

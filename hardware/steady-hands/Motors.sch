@@ -110,7 +110,7 @@ V+
 Text Label 3900 3450 2    50   ~ 0
 V-
 Text Label 2450 3750 0    50   ~ 0
-EN
+PWM
 Text Label 4600 3500 0    50   ~ 0
 V+
 Text Label 4600 4000 0    50   ~ 0
@@ -120,7 +120,7 @@ Wire Wire Line
 Wire Wire Line
 	4850 4000 4600 4000
 Text HLabel 2450 3750 0    50   Input ~ 0
-EN
+PWM
 Wire Wire Line
 	2450 3750 3050 3750
 $Comp
@@ -242,7 +242,7 @@ V1+
 Text Label 8050 3450 2    50   ~ 0
 V1-
 Text Label 6600 3750 0    50   ~ 0
-EN1
+PWM1
 Text Label 8750 3500 0    50   ~ 0
 V1+
 Text Label 8750 4000 0    50   ~ 0
@@ -252,7 +252,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 4000 8750 4000
 Text HLabel 6600 3750 0    50   Input ~ 0
-EN1
+PWM1
 Wire Wire Line
 	6600 3750 7200 3750
 $Comp

@@ -123,7 +123,7 @@ Wire Wire Line
 Wire Wire Line
 	4850 3500 5700 3500
 Text Label 4850 3500 0    50   ~ 0
-INT1
+INT
 Text Label 4850 3300 0    50   ~ 0
 nRESET1
 Text Label 4850 4100 0    50   ~ 0
@@ -135,7 +135,7 @@ SDA
 Text HLabel 4850 4100 0    50   BiDi ~ 0
 SCL
 Text HLabel 4850 3500 0    50   Output ~ 0
-INT1
+INT
 Wire Wire Line
 	5300 3150 5300 3300
 Text HLabel 4850 3300 0    50   Input ~ 0
