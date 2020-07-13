@@ -563,8 +563,6 @@ Wire Wire Line
 Connection ~ 9650 2550
 Wire Wire Line
 	9650 2550 9750 2550
-Wire Wire Line
-	9750 2550 9900 2550
 Connection ~ 9750 2550
 Wire Wire Line
 	9450 2750 9450 2850
@@ -616,19 +614,6 @@ Wire Wire Line
 Wire Wire Line
 	8050 3200 8750 3200
 Connection ~ 8050 3200
-$Comp
-L steady-hands:+1V3 #PWR?
-U 1 1 5F0C6788
-P 9900 2600
-AR Path="/5F0C6788" Ref="#PWR?"  Part="1" 
-AR Path="/5F021BD7/5F0C6788" Ref="#PWR0154"  Part="1" 
-F 0 "#PWR0154" H 9900 2800 50  0001 C CNN
-F 1 "+1V3" H 9885 2823 50  0000 C CNN
-F 2 "" H 9900 2800 50  0001 C CNN
-F 3 "" H 9900 2800 50  0001 C CNN
-	1    9900 2600
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3V3 #PWR0155
 U 1 1 5F0C7134
@@ -812,9 +797,6 @@ F 3 "~" H 10200 2550 50  0001 C CNN
 	1    10000 2550
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	9900 2550 10000 2550
-Connection ~ 9900 2550
 Connection ~ 10000 2550
 $Comp
 L Connector:TestPoint TP4
@@ -871,4 +853,22 @@ Wire Wire Line
 	10400 4400 10750 4400
 Wire Wire Line
 	10000 2550 10250 2550
+Wire Wire Line
+	9750 2550 9900 2550
+$Comp
+L steady-hands:+1V3 #PWR?
+U 1 1 5F0DA101
+P 9900 2500
+F 0 "#PWR?" H 10000 2500 50  0001 C CNN
+F 1 "+1V3" H 9885 2723 50  0000 C CNN
+F 2 "" H 9900 2500 50  0001 C CNN
+F 3 "" H 9900 2500 50  0001 C CNN
+	1    9900 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 2450 9900 2550
+Connection ~ 9900 2550
+Wire Wire Line
+	9900 2550 10000 2550
 $EndSCHEMATC
