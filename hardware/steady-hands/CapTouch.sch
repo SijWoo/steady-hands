@@ -44,9 +44,11 @@ F 3 "~" H 3800 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sij_Touch:CapSense_01x08 C20
+L steady-hands:CapSense_01x08 C20
 U 1 1 5EFBC936
 P 7550 4450
+AR Path="/5EFBC936" Ref="C20"  Part="1" 
+AR Path="/5EFB8965/5EFBC936" Ref="C20"  Part="1" 
 F 0 "C20" H 7878 5096 50  0000 L CNN
 F 1 "CapSense_01x08" H 7878 5005 50  0000 L CNN
 F 2 "Sij_Touch:TouchSlider-8_35x10mm" H 7550 4450 50  0001 C CNN
